@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="15dp">
+
+    <!--Button继承自TextView 集体属性可查看TextView学习界面-->
+    <Button
+        android:id="@+id/btn_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Button基本属性"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:background="#FFA011"
+        />
+    <!--在drawable中新建btn_1.xml-->
+    <!--这里只做一个距离当然drawable<shape>中还可以有很多设置,可参考textView_1和textView_2-->
+    <Button
+        android:id="@+id/btn_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="自定义Button背景"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:layout_below="@id/btn_1"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/btn_1"
+        />
+    <!--在drawable中添加按下按钮效果，其他效果在btn_2.xml中查看-->
+    <Button
+        android:id="@+id/btn_3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Button按压效果"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:layout_below="@id/btn_2"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/btn_2"
+        />
+
+    <Button
+        android:id="@+id/btn_4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Button响应事件1"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:layout_below="@id/btn_3"
+        android:onClick="showToast"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/textview_2"
+        />
+    <!--开发中常用-->
+    <Button
+        android:id="@+id/btn_5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Button响应事件2"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:layout_below="@id/btn_4"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/textview_2"
+        />
+
+
+
+</RelativeLayout>
