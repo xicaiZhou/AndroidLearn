@@ -10,6 +10,7 @@ public class MainActivity extends AppCompatActivity {
     private Button btn_textView;
     private Button btn_button;
     private Button btn_editText;
+    private Button btn_radioAndCheck;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
         btn_textView = findViewById(R.id.textView);
         btn_button = findViewById(R.id.Button);
         btn_editText = findViewById(R.id.EditText);
+        btn_radioAndCheck = findViewById(R.id.RadioAndCheck);
          /*
          * 给button添加OnClick（响应事件）
          * */
@@ -31,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
         btn_textView.setOnClickListener(onclick);
         btn_button.setOnClickListener(onclick);
         btn_editText.setOnClickListener(onclick);
+        btn_radioAndCheck.setOnClickListener(onclick);
 
     }
     private class OnClick implements View.OnClickListener{
@@ -49,6 +52,9 @@ public class MainActivity extends AppCompatActivity {
                 //跳转到EditText学习界面
                 case R.id.EditText:
                     intent = new Intent(MainActivity.this, EditTextActivity.class);
+                    break;
+                case R.id.RadioAndCheck:
+                    intent = new Intent(MainActivity.this, RadioAndCheckActivity.class);
                     break;
             }
             startActivity(intent);
