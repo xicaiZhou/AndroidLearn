@@ -37,4 +37,28 @@
         android:text="RadioAndCheck"
         android:textAllCaps="false"
         />
+    <Button
+        android:id="@+id/ImageView"
+        android:layout_below="@id/RadioAndCheck"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="ImageView"
+        android:textAllCaps="false"
+        />
+    <Button
+        android:id="@+id/SwitchToggle"
+        android:layout_below="@id/ImageView"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="SwitchToggle"
+        android:textAllCaps="false"
+        />
+    <Button
+        android:id="@+id/ListView"
+        android:layout_below="@id/SwitchToggle"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="ListView"
+        android:textAllCaps="false"
+        />
 </RelativeLayout>
