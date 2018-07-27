@@ -1,9 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="com.example.zhouxicai.androidlearn.ProgressBarActivity">
 
-</android.support.constraint.ConstraintLayout>
+    <!--常见属性详解-->
+    <!--android:max：进度条的最大值-->
+    <!--android:progress：进度条已完成进度值-->
+    <!--android:progressDrawable：设置轨道对应的Drawable对象-->
+    <!--android:indeterminate：如果设置成true，则进度条不精确显示进度-->
+    <!--android:indeterminateDrawable：设置不显示进度的进度条的Drawable对象-->
+    <!--android:indeterminateDuration：设置不精确显示进度的持续时间-->
+    <!--android:secondaryProgress：二级进度条，类似于视频播放的一条是当前播放进度，一条是缓冲进度，前者通过progress属性进行设置！-->
+
+
+    <!--对应的java中可调用的方法-->
+    <!--getMax()：返回这个进度条的范围的上限-->
+    <!--getProgress()：返回进度-->
+    <!--getSecondaryProgress()：返回次要进度-->
+    <!--incrementProgressBy(int diff)：指定增加的进度-->
+    <!--isIndeterminate()：指示进度条是否在不确定模式下-->
+    <!--setIndeterminate(boolean indeterminate)：设置不确定模式下-->
+
+
+
+    <ProgressBar
+        android:id="@+id/ProBar_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@android:style/Widget.ProgressBar.Small"/>
+
+    <ProgressBar
+        android:id="@+id/ProBar_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+    <ProgressBar
+        android:id="@+id/ProBar_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@android:style/Widget.ProgressBar.Large"/>
+
+    <!--系统提供的水平进度条-->
+    <ProgressBar
+    android:id="@+id/ProBar_4"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:max="100"
+    android:progress="18"
+    style="@android:style/Widget.ProgressBar.Horizontal"/>
+
+    <ProgressBar
+        android:id="@+id/ProBar_5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:indeterminate="true"
+        style="@android:style/Widget.ProgressBar.Horizontal"/>
+
+    <ImageView
+        android:id="@+id/im_pro_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/animation_progress_bar"/>
+
+
+</LinearLayout>

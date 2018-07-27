@@ -25,7 +25,9 @@ import java.util.List;
         mData.add(new nemu("学习内容","https://www.baidu.com/img/superlogo_c4d7df0a003d3db9b65e9ef0fe6da1ec.png","2018-07-25","EditText"));
         mData.add(new nemu("学习内容","https://www.baidu.com/img/superlogo_c4d7df0a003d3db9b65e9ef0fe6da1ec.png","2018-07-25","RadioAndCheck"));
         mData.add(new nemu("学习内容","https://www.baidu.com/img/superlogo_c4d7df0a003d3db9b65e9ef0fe6da1ec.png","2018-07-25","ImageView"));
-        mData.add(new nemu("学习内容","https://www.baidu.com/img/superlogo_c4d7df0a003d3db9b65e9ef0fe6da1ec.png","2018-07-25","SwitchAndToggle"));
+        mData.add(new nemu("学习内容","https://www.baidu.com/img/superlogo_c4d7df0a003d3db9b65e9ef0fe6da1ec.png","2018-07-25","ProgressBar"));
+
+//        mData.add(new nemu("学习内容","https://www.baidu.com/img/superlogo_c4d7df0a003d3db9b65e9ef0fe6da1ec.png","2018-07-25","SwitchAndToggle"));
 
         MyListAdapter adapter = new MyListAdapter((LinkedList<nemu>) mData, ListViewActivity.this);
         mLv1.setAdapter(adapter);
@@ -56,6 +58,9 @@ import java.util.List;
                         intent = new Intent(ListViewActivity.this, ImageVIewActivity.class);
                         break;
                     case 5:
+                        intent = new Intent(ListViewActivity.this, ProgressBarActivity.class);
+                        break;
+                    case 6:
                         intent = new Intent(ListViewActivity.this, ToggleAndSwitchActivity.class);
                         break;
                 }
