@@ -24,7 +24,9 @@
         <activity android:name=".RadioAndCheckActivity" />
         <activity android:name=".ImageVIewActivity" />
         <activity android:name=".ToggleAndSwitchActivity" />
-        <activity android:name=".ProgressBarActivity"></activity>
+        <activity android:name=".ProgressBarActivity" />
+        <activity android:name=".SeekBarActivity" />
+        <activity android:name=".RatingBarctivity"></activity>
     </application>
 
 </manifest>

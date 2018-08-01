@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="15dp">
+
+    <!--——相关属性：-->
+
+    <!--android:isIndicator：是否用作指示，用户无法更改，默认false-->
+    <!--android:numStars：显示多少个星星，必须为整数-->
+    <!--android:rating：默认评分值，必须为浮点数-->
+    <!--android:stepSize： 评分每次增加的值，必须为浮点数-->
+
+    <!--除了上面这些，还有两种样式供我们选择咧，但是不建议使用，因为这两种样式都好丑... 他们分别是：-->
+    <!--style="?android:attr/ratingBarStyleSmall"-->
+    <!--style="?android:attr/ratingBarStyleIndicator"-->
+    <RatingBar
+        android:id="@+id/ratB_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:numStars="5"
+        android:rating="2.0"
+        />
+    <RatingBar
+        android:id="@+id/ratB_2"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:rating="2.0"
+        style="@style/roomRatingBar"
+        />
+
+</LinearLayout>

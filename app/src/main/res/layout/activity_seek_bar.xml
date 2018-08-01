@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.zhouxicai.androidlearn.SeekBarActivity"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <SeekBar
+        android:id="@+id/SB_1"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:max="100"
+        android:progress="10"
+        android:secondaryProgress="70"/>
+
+    <TextView
+        android:id="@+id/T1_sb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="20sp" />
+
+    <SeekBar
+        android:id="@+id/SB_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="100"
+        android:progress="10"
+        android:maxHeight="5dp"
+        android:minHeight="5dp"
+        android:progressDrawable="@drawable/sb_bar"
+        android:thumb="@drawable/seek_thunb"/>
+</LinearLayout>
