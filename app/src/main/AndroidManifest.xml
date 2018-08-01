@@ -26,7 +26,8 @@
         <activity android:name=".ToggleAndSwitchActivity" />
         <activity android:name=".ProgressBarActivity" />
         <activity android:name=".SeekBarActivity" />
-        <activity android:name=".RatingBarctivity"></activity>
+        <activity android:name=".RatingBarctivity" />
+        <activity android:name=".ScrollViewActivity"></activity>
     </application>
 
 </manifest>
