@@ -30,6 +30,7 @@ import java.util.List;
         mData.add(new nemu("学习内容","https://www.baidu.com/img/superlogo_c4d7df0a003d3db9b65e9ef0fe6da1ec.png","2018-07-25","SeekBar"));
         mData.add(new nemu("学习内容","https://www.baidu.com/img/superlogo_c4d7df0a003d3db9b65e9ef0fe6da1ec.png","2018-07-25","RatingBar"));
         mData.add(new nemu("学习内容","https://www.baidu.com/img/superlogo_c4d7df0a003d3db9b65e9ef0fe6da1ec.png","2018-07-25","ScrollView"));
+        mData.add(new nemu("学习内容","https://www.baidu.com/img/superlogo_c4d7df0a003d3db9b65e9ef0fe6da1ec.png","2018-07-25","DateAndTime"));
 
         MyListAdapter adapter = new MyListAdapter((LinkedList<nemu>) mData, ListViewActivity.this);
         mLv1.setAdapter(adapter);
@@ -73,6 +74,9 @@ import java.util.List;
                         break;
                     case 9:
                         intent = new Intent(ListViewActivity.this, ScrollViewActivity.class);
+                        break;
+                    case 10:
+                        intent = new Intent(ListViewActivity.this, DateAndTimeActivity.class);
                         break;
                 }
                 startActivity(intent);

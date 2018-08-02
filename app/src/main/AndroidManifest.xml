@@ -27,7 +27,8 @@
         <activity android:name=".ProgressBarActivity" />
         <activity android:name=".SeekBarActivity" />
         <activity android:name=".RatingBarctivity" />
-        <activity android:name=".ScrollViewActivity"></activity>
+        <activity android:name=".ScrollViewActivity" />
+        <activity android:name=".DateAndTimeActivity"></activity>
     </application>
 
 </manifest>

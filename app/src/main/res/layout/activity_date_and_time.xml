@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    tools:targetApi="jelly_bean_mr1" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextClock
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:format12Hour="MM/dd/yy HH:mm:ss aa"/>
+            <TextClock
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:format12Hour="MMM dd, yyyy h:mmaa"/>
+
+            <TextClock
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:format12Hour="MMMM dd, yyyy h:mmaa"/>
+
+            <TextClock
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:format12Hour="E, MMMM dd, yyyy h:mmaa"/>
+
+            <TextClock
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:format12Hour="EEEE, MMMM dd, yyyy h:mmaa"/>
+
+            <TextClock
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:format12Hour="Noteworthy day, 'M/d/yy"/>
+
+
+            <TextView android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="日期选择器"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <!--android:calendarViewShown 是否显示右侧日历-->
+                <DatePicker
+                    android:id="@+id/dp_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:calendarViewShown="false"
+                    android:datePickerMode="spinner"
+                    />
+                <DatePicker
+                    android:id="@+id/dp_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    />
+            </LinearLayout>
+            <TextView android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="时间选择器"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!--android:timePickerMode：组件外观，同样可选值为:spinner和clock(默认) 前者是旧版本的TimePicker~ -->
+                <TimePicker
+                    android:id="@+id/tp_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:timePickerMode="spinner"/>
+
+                <TimePicker
+                    android:id="@+id/tp_2"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:timePickerMode="clock"/>
+
+
+            </LinearLayout>
+            <!--android:firstDayOfWeek：设置一个星期的第一天-->
+            <!--android:maxDate ：最大的日期显示在这个日历视图mm / dd / yyyy格式-->
+            <!--android:minDate：最小的日期显示在这个日历视图mm / dd / yyyy格式-->
+            <!--android:weekDayTextAppearance：工作日的文本出现在日历标题缩写-->
+            <CalendarView
+                android:id="@+id/CDV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>
