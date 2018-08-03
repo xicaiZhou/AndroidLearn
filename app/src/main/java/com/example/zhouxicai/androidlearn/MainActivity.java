@@ -1,6 +1,5 @@
 package com.example.zhouxicai.androidlearn;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -73,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
                     intent = new Intent(MainActivity.this, ToggleAndSwitchActivity.class);
                     break;
                 case R.id.ListView:
-                    intent = new Intent(MainActivity.this, ListViewActivity.class);
+                    intent = new Intent(MainActivity.this, MainListViewActivity.class);
                     break;
             }
             startActivity(intent);

@@ -1,87 +1,101 @@
- package com.example.zhouxicai.androidlearn;
+package com.example.zhouxicai.androidlearn;
 
-import android.content.Intent;
+import android.app.ListActivity;
+import android.content.Context;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.AdapterView;
+import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import java.util.LinkedList;
-import java.util.List;
 
- public class ListViewActivity extends AppCompatActivity {
-    private ListView mLv1;
-    private List<nemu>mData;
+public class ListViewActivity extends AppCompatActivity {
+
+    private Button zBtn_add1, zBtn_add2, zBtn_remove1, zBtn_remove2;
+    private ListView zListView;
+    private TextView zTextView;
+    private LinkedList<Data> mData = null;
+    private int index = 1;
+    private Data mData_5 = null;
+    private ListAdapter listAdapter = null;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_list_view);
-        mLv1 = findViewById(R.id.lv_1);
+        setContentView(R.layout.activity_list_view2);
 
-        mData = new LinkedList<nemu>();
-        mData.add(new nemu("学习内容","https://www.baidu.com/img/superlogo_c4d7df0a003d3db9b65e9ef0fe6da1ec.png","2018-07-25","TextView"));
-        mData.add(new nemu("学习内容","https://www.baidu.com/img/superlogo_c4d7df0a003d3db9b65e9ef0fe6da1ec.png","2018-07-25","Button"));
-        mData.add(new nemu("学习内容","https://www.baidu.com/img/superlogo_c4d7df0a003d3db9b65e9ef0fe6da1ec.png","2018-07-25","EditText"));
-        mData.add(new nemu("学习内容","https://www.baidu.com/img/superlogo_c4d7df0a003d3db9b65e9ef0fe6da1ec.png","2018-07-25","RadioAndCheck"));
-        mData.add(new nemu("学习内容","https://www.baidu.com/img/superlogo_c4d7df0a003d3db9b65e9ef0fe6da1ec.png","2018-07-25","ImageView"));
-        mData.add(new nemu("学习内容","https://www.baidu.com/img/superlogo_c4d7df0a003d3db9b65e9ef0fe6da1ec.png","2018-07-25","ProgressBar"));
-        mData.add(new nemu("学习内容","https://www.baidu.com/img/superlogo_c4d7df0a003d3db9b65e9ef0fe6da1ec.png","2018-07-25","SwitchAndToggle"));
-        mData.add(new nemu("学习内容","https://www.baidu.com/img/superlogo_c4d7df0a003d3db9b65e9ef0fe6da1ec.png","2018-07-25","SeekBar"));
-        mData.add(new nemu("学习内容","https://www.baidu.com/img/superlogo_c4d7df0a003d3db9b65e9ef0fe6da1ec.png","2018-07-25","RatingBar"));
-        mData.add(new nemu("学习内容","https://www.baidu.com/img/superlogo_c4d7df0a003d3db9b65e9ef0fe6da1ec.png","2018-07-25","ScrollView"));
-        mData.add(new nemu("学习内容","https://www.baidu.com/img/superlogo_c4d7df0a003d3db9b65e9ef0fe6da1ec.png","2018-07-25","DateAndTime"));
+        bindView();
 
-        MyListAdapter adapter = new MyListAdapter((LinkedList<nemu>) mData, ListViewActivity.this);
-        mLv1.setAdapter(adapter);
+        mData = new LinkedList<Data>();
+        listAdapter = new ListAdapter(mData, ListViewActivity.this);
+        zListView.setAdapter(listAdapter);
 
-
-
-        mLv1.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                Intent intent = null;
-                switch (i){
-                    //跳转到TextView学习界面
-                    case 0:
-                        intent = new Intent(ListViewActivity.this, TextViewActivity.class);
-                        break;
-                    //跳转到Button学习界面
-                    case 1:
-                        intent = new Intent(ListViewActivity.this, ButtonActivity.class);
-                        break;
-                    //跳转到EditText学习界面
-                    case 2:
-                        intent = new Intent(ListViewActivity.this, EditTextActivity.class);
-                        break;
-                    case 3:
-                        intent = new Intent(ListViewActivity.this, RadioAndCheckActivity.class);
-                        break;
-                    case 4:
-                        intent = new Intent(ListViewActivity.this, ImageVIewActivity.class);
-                        break;
-                    case 5:
-                        intent = new Intent(ListViewActivity.this, ProgressBarActivity.class);
-                        break;
-                    case 6:
-                        intent = new Intent(ListViewActivity.this, ToggleAndSwitchActivity.class);
-                        break;
-                    case 7:
-                        intent = new Intent(ListViewActivity.this, SeekBarActivity.class);
-                        break;
-                    case 8:
-                        intent = new Intent(ListViewActivity.this, RatingBarctivity.class);
-                        break;
-                    case 9:
-                        intent = new Intent(ListViewActivity.this, ScrollViewActivity.class);
-                        break;
-                    case 10:
-                        intent = new Intent(ListViewActivity.this, DateAndTimeActivity.class);
-                        break;
-                }
-                startActivity(intent);
-            }
-        });
+        zTextView.setText("暂无数据~");
+        zListView.setEmptyView(zTextView);
 
     }
+//    private void updateListItem(int postion,Data mData){
+//        int visiblePosition = zListView.getFirstVisiblePosition();
+//        View v = zListView.getChildAt(postion - visiblePosition);
+//        TextView tv = (TextView) v.findViewById(R.id.txt_content);
+//        tv.setText(mData.getContent());
+//    }
+
+    private void bindView(){
+        zBtn_add1 = findViewById(R.id.btn_add);
+        zBtn_add2 = findViewById(R.id.btn_add2);
+
+        zBtn_remove1 = findViewById(R.id.btn_remove);
+        zBtn_remove2 = findViewById(R.id.btn_remove2);
+
+        zListView = findViewById(R.id.list_one);
+
+        zTextView = findViewById(R.id.txt_empty);
+
+        setOnClick();
+
+    }
+
+    private void setOnClick(){
+        onClick click = new onClick();
+        zBtn_add1.setOnClickListener(click);
+        zBtn_add2.setOnClickListener(click);
+
+        zBtn_remove1.setOnClickListener(click);
+        zBtn_remove2.setOnClickListener(click);
+
+    }
+
+    private class onClick implements View.OnClickListener{
+
+        @Override
+        public void onClick(View view) {
+            switch (view.getId()){
+                case R.id.btn_add:
+                    if(index == 5){
+                        mData_5 = new Data("https://www.baidu.com/img/superlogo_c4d7df0a003d3db9b65e9ef0fe6da1ec.png","给猪哥跪了~~~ x " + index);
+                        listAdapter.add(mData_5);
+                    }else{
+                        listAdapter.add(new Data("https://www.baidu.com/img/superlogo_c4d7df0a003d3db9b65e9ef0fe6da1ec.png","给猪哥跪了~~~ x " + index));
+                    }
+                    index++;
+                    break;
+                case R.id.btn_add2:
+                    //position从0开始算的
+                    listAdapter.add(4,new Data("https://www.baidu.com/img/superlogo_c4d7df0a003d3db9b65e9ef0fe6da1ec.png","给猪哥跪了~~~ x " + index));
+                    break;
+                case R.id.btn_remove:
+                    listAdapter.remove(mData_5);
+                    break;
+                case R.id.btn_remove2:
+                    listAdapter.remove(0);
+                    break;
+            }
+        }
+    }
+
 }
