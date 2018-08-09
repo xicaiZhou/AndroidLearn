@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">AndroidLearn</string>
+    <string name="spin_title">分段选择</string>
+    <string name="spin_1_title">召唤师英雄选择</string>
 </resources>

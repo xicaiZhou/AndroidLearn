@@ -29,7 +29,10 @@
         <activity android:name=".RatingBarctivity" />
         <activity android:name=".ScrollViewActivity" />
         <activity android:name=".DateAndTimeActivity" />
-        <activity android:name=".ListViewActivity"></activity>
+        <activity android:name=".ListViewActivity" />
+        <activity android:name=".GridView.GridViewActivity" />
+        <activity android:name=".SpinnerActivity" />
+        <activity android:name=".AutoCompleteTextViewActivity"></activity>
     </application>
 
 </manifest>

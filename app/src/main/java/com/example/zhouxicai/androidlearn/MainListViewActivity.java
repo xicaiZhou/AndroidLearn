@@ -7,6 +7,8 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
+import com.example.zhouxicai.androidlearn.GridView.GridViewActivity;
+
 import java.util.LinkedList;
 import java.util.List;
 
@@ -20,18 +22,22 @@ import java.util.List;
         mLv1 = findViewById(R.id.lv_1);
 
         mData = new LinkedList<nemu>();
-        mData.add(new nemu("学习内容","https://www.baidu.com/img/superlogo_c4d7df0a003d3db9b65e9ef0fe6da1ec.png","2018-07-25","TextView"));
-        mData.add(new nemu("学习内容","https://www.baidu.com/img/superlogo_c4d7df0a003d3db9b65e9ef0fe6da1ec.png","2018-07-25","Button"));
-        mData.add(new nemu("学习内容","https://www.baidu.com/img/superlogo_c4d7df0a003d3db9b65e9ef0fe6da1ec.png","2018-07-25","EditText"));
-        mData.add(new nemu("学习内容","https://www.baidu.com/img/superlogo_c4d7df0a003d3db9b65e9ef0fe6da1ec.png","2018-07-25","RadioAndCheck"));
-        mData.add(new nemu("学习内容","https://www.baidu.com/img/superlogo_c4d7df0a003d3db9b65e9ef0fe6da1ec.png","2018-07-25","ImageView"));
-        mData.add(new nemu("学习内容","https://www.baidu.com/img/superlogo_c4d7df0a003d3db9b65e9ef0fe6da1ec.png","2018-07-25","ProgressBar"));
-        mData.add(new nemu("学习内容","https://www.baidu.com/img/superlogo_c4d7df0a003d3db9b65e9ef0fe6da1ec.png","2018-07-25","SwitchAndToggle"));
-        mData.add(new nemu("学习内容","https://www.baidu.com/img/superlogo_c4d7df0a003d3db9b65e9ef0fe6da1ec.png","2018-07-25","SeekBar"));
-        mData.add(new nemu("学习内容","https://www.baidu.com/img/superlogo_c4d7df0a003d3db9b65e9ef0fe6da1ec.png","2018-07-25","RatingBar"));
-        mData.add(new nemu("学习内容","https://www.baidu.com/img/superlogo_c4d7df0a003d3db9b65e9ef0fe6da1ec.png","2018-07-25","ScrollView"));
-        mData.add(new nemu("学习内容","https://www.baidu.com/img/superlogo_c4d7df0a003d3db9b65e9ef0fe6da1ec.png","2018-07-25","DateAndTime"));
-        mData.add(new nemu("学习内容","https://www.baidu.com/img/superlogo_c4d7df0a003d3db9b65e9ef0fe6da1ec.png","2018-07-25","ListView"));
+        mData.add(new nemu("学习内容","https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1188070358,4241211350&fm=27&gp=0.jpg","2018-07-25","TextView"));
+        mData.add(new nemu("学习内容","https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1188070358,4241211350&fm=27&gp=0.jpg","2018-07-25","Button"));
+        mData.add(new nemu("学习内容","https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1188070358,4241211350&fm=27&gp=0.jpg","2018-07-25","EditText"));
+        mData.add(new nemu("学习内容","https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1188070358,4241211350&fm=27&gp=0.jpg","2018-07-25","RadioAndCheck"));
+        mData.add(new nemu("学习内容","https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1188070358,4241211350&fm=27&gp=0.jpg","2018-07-25","ImageView"));
+        mData.add(new nemu("学习内容","https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1188070358,4241211350&fm=27&gp=0.jpg","2018-07-25","ProgressBar"));
+        mData.add(new nemu("学习内容","https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1188070358,4241211350&fm=27&gp=0.jpg","2018-07-25","SwitchAndToggle"));
+        mData.add(new nemu("学习内容","https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1188070358,4241211350&fm=27&gp=0.jpg","2018-07-25","SeekBar"));
+        mData.add(new nemu("学习内容","https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1188070358,4241211350&fm=27&gp=0.jpg","2018-07-25","RatingBar"));
+        mData.add(new nemu("学习内容","https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1188070358,4241211350&fm=27&gp=0.jpg","2018-07-25","ScrollView"));
+        mData.add(new nemu("学习内容","https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1188070358,4241211350&fm=27&gp=0.jpg","2018-07-25","DateAndTime"));
+        mData.add(new nemu("学习内容","https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1188070358,4241211350&fm=27&gp=0.jpg","2018-07-25","ListView"));
+        mData.add(new nemu("学习内容","https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1188070358,4241211350&fm=27&gp=0.jpg","2018-07-25","GridView"));
+        mData.add(new nemu("学习内容","https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1188070358,4241211350&fm=27&gp=0.jpg","2018-07-25","Spinner"));
+        mData.add(new nemu("学习内容","https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1188070358,4241211350&fm=27&gp=0.jpg","2018-07-25","AutoCompleteTextViewActivity"));
+
 
         MyListAdapter adapter = new MyListAdapter((LinkedList<nemu>) mData, MainListViewActivity.this);
         mLv1.setAdapter(adapter);
@@ -81,6 +87,15 @@ import java.util.List;
                         break;
                     case 11:
                         intent = new Intent(MainListViewActivity.this, ListViewActivity.class);
+                        break;
+                    case 12:
+                        intent = new Intent(MainListViewActivity.this, GridViewActivity.class);
+                        break;
+                    case 13:
+                        intent = new Intent(MainListViewActivity.this, SpinnerActivity.class);
+                        break;
+                    case 14:
+                        intent = new Intent(MainListViewActivity.this, AutoCompleteTextViewActivity.class);
                         break;
                 }
                 startActivity(intent);

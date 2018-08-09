@@ -6,8 +6,8 @@
 
     <ImageView
         android:id="@+id/img_icon"
-        android:layout_width="56dp"
-        android:layout_height="56dp"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
 
         android:background="#D9D9D9"
         android:src="@drawable/username"/>
@@ -16,8 +16,9 @@
         android:id="@+id/txt_content"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
         android:layout_marginLeft="10dp"
+        android:text="德玛西亚"
+        android:layout_gravity="center"
         android:textSize="18sp" />
 
 </LinearLayout>
